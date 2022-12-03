@@ -10,9 +10,7 @@ for (let i = 0; i < arr.length; i = i + 3) {
 
 const newestArr = newArr
   .map((a) => a.map((b) => b.split("")))
-  .map((a) =>
-    a[0].find((b) => a[1].filter((c) => a[2].includes(c)).includes(b))
-  )
+  .map(([a, b, c]) => a.find((x) => b.filter((v) => c.includes(v)).includes(x)))
   .map((a) => a.charCodeAt(0))
   .map((a) => (a > 96 ? a - 96 : a - 38))
   .reduce((a, b) => a + b);
