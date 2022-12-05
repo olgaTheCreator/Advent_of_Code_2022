@@ -4,14 +4,7 @@ const data = fs.readFileSync("../input.txt", "utf8");
 const arr = data
   .split("\n")
   .map((a) => a.split(/[^0-9]/))
-  .map((a) => a.map((b) => parseInt(b)));
+  .map((a) => a.map((b) => parseInt(b)))
+  .reduce((a, [x, y, z, v]) => a + (y < z || v < x ? 0 : 1), 0);
 
-let pairs = arr.length;
-
-const newArr = arr.forEach(([x, y, z, v]) => {
-  if (y < z || v < x) {
-    pairs--;
-  }
-});
-
-console.log(pairs);
+console.log(arr);
