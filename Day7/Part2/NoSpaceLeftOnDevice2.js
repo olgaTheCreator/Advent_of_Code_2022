@@ -74,7 +74,4 @@ console.log(filtered.reduce((acc, b) => acc + b));
 console.log(sizesArray);
 const sorted = sizesArray.sort((a, b) => b - a);
 
-// console.log(sorted);
-// // sorted.filter(a => )
-// sorted.forEach((a) => console.log(70000000 - sorted[0] + a));
 console.log(sorted.filter((a) => 70000000 - sorted[0] + a > 30000000).at(-1));
