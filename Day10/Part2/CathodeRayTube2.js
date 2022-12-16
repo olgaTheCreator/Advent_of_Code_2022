@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { createUnparsedSourceFile } = require("typescript");
 const data = fs.readFileSync("../input.txt", "utf8");
 
 const arr = data.split("\n").map((a) => (a === "noop" ? [a] : a.split(" ")));
